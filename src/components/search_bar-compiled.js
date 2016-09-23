@@ -37,7 +37,7 @@ var SearchBar = function (_Component) {
 
             return _react2.default.createElement(
                 'div',
-                null,
+                { className: 'search-bar' },
                 _react2.default.createElement('input', {
                     value: this.state.term,
                     onChange: function onChange(event) {
