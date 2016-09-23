@@ -41,9 +41,15 @@ var SearchBar = function (_Component) {
                 _react2.default.createElement('input', {
                     value: this.state.term,
                     onChange: function onChange(event) {
-                        return _this2.setState({ term: event.target.value });
+                        return _this2.onInputChange(event.target.value);
                     } })
             );
+        }
+    }, {
+        key: 'onInputChange',
+        value: function onInputChange(term) {
+            this.setState({ term: term });
+            this.props.onSearchTermChange(term);
         }
     }]);
 
